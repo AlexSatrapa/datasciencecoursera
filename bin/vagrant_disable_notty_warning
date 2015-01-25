@@ -1,0 +1,4 @@
+#!/bin/sh
+# silence the nonsense about STDIN not being a tty
+# https://github.com/mitchellh/vagrant/issues/1673
+sudo sed -i 's/^mesg n$/tty -s \&\& mesg n/g' /root/.profile

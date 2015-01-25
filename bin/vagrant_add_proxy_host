@@ -1,0 +1,6 @@
+#!/bin/sh
+proxy=`grep proxy /etc/hosts`
+if [ -z "$proxy" ] ; then
+	echo "$1 proxy" >> /etc/hosts
+	echo "$1 host.dev" >> /etc/hosts
+fi
